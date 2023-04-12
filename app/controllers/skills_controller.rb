@@ -1,4 +1,4 @@
-class CategoriesController < ApplicationController
+class SkillsController < ApplicationController
   before_action :set_skill, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -13,9 +13,9 @@ class CategoriesController < ApplicationController
 
   def create
     @skill = Skill.new(
-      problem: problem = params[:problem] = params[:problem]
-      problem: solution = params[:solution] = params[:solution]
-      problem: category_id = params[:category_id] = params[:category_id]
+      problem: problem = params[:problem],
+      solution: solution = params[:solution],
+      category_id: category_id = params[:category_id]
     )
 #   redirect_to/unprocessable_entity / success message
 

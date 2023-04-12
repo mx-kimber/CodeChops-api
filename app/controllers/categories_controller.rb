@@ -13,7 +13,7 @@ class CategoriesController < ApplicationController
 
   def create
     @category = Category.new(
-      name: name = params[:name] = params[:name]
+      name: name = params[:name]
     )
 #   redirect_to/unprocessable_entity / success message
     @category.save
