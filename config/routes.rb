@@ -1,13 +1,13 @@
 Rails.application.routes.draw do
 
   # front end (?)
-  get "/codechops" => "codechops#index"
-  get "/codechops/:id" => "codechops#show"
+  # get "/codechops" => "codechops#index"
+  # get "/codechops/:id" => "codechops#show"
 
   # categories
   get "/categories" => "categories#index"
   get "/categories/:id" => "categories#show"
-  post "categories/" => "categories#create"
+  post "/categories/" => "categories#create"
   patch "/categories/:id" => "categories#update"
   delete "/categories/:id" => "categories#destroy"
 
