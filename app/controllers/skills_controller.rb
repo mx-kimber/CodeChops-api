@@ -1,5 +1,5 @@
 class SkillsController < ApplicationController
-  before_action :set_skill, only: [:show, :edit, :update, :destroy]
+  #before_action :set_skill, only: [:show, :edit, :update, :destroy]
 
   def index
     @skills = Skill.all
@@ -16,9 +16,9 @@ class SkillsController < ApplicationController
       problem: problem = params[:problem],
       solution: solution = params[:solution],
       category_id: category_id = params[:category_id]
+
     )
 #   redirect_to/unprocessable_entity / success message
-
     @skill.save
     render :show
   end
@@ -28,17 +28,17 @@ class SkillsController < ApplicationController
     @skill.problem = params[:problem] || @skill.problem
     @skill.solution = params[:solution] || @skill.solution
     @skill.category_id = params[:category_id] || @skill.category_id
-#   redirect_to/unprocessable_entity / success message
 
+#   redirect_to/unprocessable_entity / success message
     @skill.save
-    rendr :show
+    render :show
   end
 
   def destroy
     @skill = Skill.find_by(id: params[:id])
     @skill.destroy
     render json: {message: "skill successfully destroyed."}
-#   redirect_to/are you sure you want to delete this?
+#   redirect_to/unprocessable_entity / success message
   end
 
 end

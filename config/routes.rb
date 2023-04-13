@@ -6,18 +6,16 @@ Rails.application.routes.draw do
 
   # categories
   get "/categories" => "categories#index"
-  get "/categories/:id" => "categories#show"
-  post "/categories/" => "categories#create"
-  patch "/categories/:id" => "categories#update"
-  delete "/categories/:id" => "categories#destroy"
-
-  # skills
   get "/skills" => "skills#index"
-  get "skills/:id" => "skills#show"
-  post "skills/" => "skills#create"
+  get "/categories/:id" => "categories#show"
+  get "/skills/:id" => "skills#show"
+  get "/skills/:id" => "skills#show"
+  post "/categories/" => "categories#create"
+  post "/skills/" => "skills#create"
+  patch "/categories/:id" => "categories#update"
   patch "/skills/:id" => "skills#update"
+  delete "/categories/:id" => "categories#destroy"
   delete "/skills/:id" => "skills#destroy"
-
 
 end
 
