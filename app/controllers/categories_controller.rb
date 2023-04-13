@@ -17,7 +17,7 @@ class CategoriesController < ApplicationController
     )
 
     @category.save
-    render :show, json: {message: "skill successfully created."}
+    render :show, json: {message: "Category successfully created."}
   end
 
   def update
@@ -25,7 +25,7 @@ class CategoriesController < ApplicationController
     @category.name = params[:name] || @category.name
 
     @category.save
-    render :show, json: {message: "skill successfully updated."}
+    render :show, json: {message: "Category successfully updated."}
   end
 
   def destroy
