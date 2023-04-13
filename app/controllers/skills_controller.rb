@@ -16,11 +16,10 @@ class SkillsController < ApplicationController
       problem: problem = params[:problem],
       solution: solution = params[:solution],
       category_id: category_id = params[:category_id]
-
     )
-#   redirect_to/unprocessable_entity / success message
+
     @skill.save
-    render :show
+    render :show, json: {message: "skill successfully created."}
   end
 
   def update
@@ -29,16 +28,16 @@ class SkillsController < ApplicationController
     @skill.solution = params[:solution] || @skill.solution
     @skill.category_id = params[:category_id] || @skill.category_id
 
-#   redirect_to/unprocessable_entity / success message
+
     @skill.save
-    render :show
+    render :show, json: {message: "skill successfully updated."}
   end
 
   def destroy
     @skill = Skill.find_by(id: params[:id])
     @skill.destroy
     render json: {message: "skill successfully destroyed."}
-#   redirect_to/unprocessable_entity / success message
+
   end
 
 end

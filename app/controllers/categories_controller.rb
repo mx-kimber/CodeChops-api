@@ -15,24 +15,24 @@ class CategoriesController < ApplicationController
     @category = Category.new(
       name: name = params[:name]
     )
-#   redirect_to/unprocessable_entity / success message
+
     @category.save
-    render :show
+    render :show, json: {message: "skill successfully created."}
   end
 
   def update
     @category = Category.find_by(id: params[:id])
     @category.name = params[:name] || @category.name
-#   redirect_to/unprocessable_entity / success message
+
     @category.save
-    render :show
+    render :show, json: {message: "skill successfully updated."}
   end
 
   def destroy
     @category = Category.find_by(id: params[:id])
     @category.destroy
+
     render json: {message: "Category successfully destroyed."}
-#   redirect_to/unprocessable_entity / success message
   end
 
 end

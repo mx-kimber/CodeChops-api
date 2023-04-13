@@ -1,3 +1,4 @@
 class Category < ApplicationRecord
-  # has_many :skills
+   has_many :skills
+
 end
