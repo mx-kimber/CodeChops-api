@@ -1,8 +1,8 @@
 class CategoriesController < ApplicationController
-  before_action :set_category, only: [:show, :edit, :update, :destroy]
+
 
   def index
-    @category = Category.all
+    @categories = Category.all
     render :index
   end
 
@@ -25,7 +25,7 @@ class CategoriesController < ApplicationController
     @category.name = params[:name] || @category.name
 #   redirect_to/unprocessable_entity / success message
     @category.save
-    rendr :show
+    render :show
   end
 
   def destroy
