@@ -1,24 +1,12 @@
-# README
+Work in progress:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+CodeChops -> because skills = chops
 
-Things you may want to cover:
+User will be able to choose from a category of skills topics. It will 
+then randomize a single problem from that category to solve with 
+option to show the solution. -or- user can randomize 
+a single problem from ALL skill's categories. 
 
-* Ruby version
+** Currently recreating from scratch using Jbuilder **
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Full Read Me coming soon
